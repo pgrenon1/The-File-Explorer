@@ -1,5 +1,5 @@
 CLS
-REM @ECHO off
+@ECHO off
 TITLE Ghost
 SETLOCAL EnableDelayedExpansion
 
@@ -7,7 +7,7 @@ REM SET the root so that the ghost does not exit the game!
 SET "root=%cd%"
 
 :SWITCHDIR
-timeout /t 2 /nobreak
+timeout /t 1 /nobreak>NUL
 
 REM find the ghost and its folder
 FOR /R .\ %%a in (*) do IF "%%~nxa"=="Ghost.txt" SET g=%%~dpnxa
