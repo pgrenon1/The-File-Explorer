@@ -11,7 +11,7 @@ attrib %~n0 | findstr "^....H" >nul && (
   goto UNLOCK
 ) || (
   goto LOCK
-)
+) 
 echo Unlock [U] or Lock [L]?
 set/p "un=>"
 if %un%==U goto UNLOCK
@@ -27,9 +27,9 @@ echo Locked.
 goto End
 
 :UNLOCK
-echo Enter password to Unlock.
+echo Enter password to unlock %~n0.
 set/p "pass=>"
-if NOT %pass%==1234 goto FAIL
+if NOT %pass%==brown goto FAIL
 attrib -h %~n0
 echo Unlocked successfully
 goto End
