@@ -1,0 +1,1 @@
+A simple, yellow pages notepad. It is new. (Item key:"seven")

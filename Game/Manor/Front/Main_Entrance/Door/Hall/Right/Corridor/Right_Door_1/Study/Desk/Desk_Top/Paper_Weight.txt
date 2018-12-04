@@ -1,0 +1,1 @@
+A crystal half-sphere with stained glass spots inside. (Item key:"clay")

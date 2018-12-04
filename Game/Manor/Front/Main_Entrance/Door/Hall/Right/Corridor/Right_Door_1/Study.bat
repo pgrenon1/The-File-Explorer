@@ -27,9 +27,9 @@ echo Locked.
 goto End
 
 :UNLOCK
-echo Enter password to Unlock.
+echo Enter password to unlock %~n0.
 set/p "pass=>"
-if NOT %pass%==1234 goto FAIL
+if NOT %pass%==sculpture goto FAIL
 attrib -h %~n0
 echo Unlocked successfully
 goto End
