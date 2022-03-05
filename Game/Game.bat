@@ -1,19 +1,25 @@
 CLS
 @ECHO off
-TITLE Ghost
+TITLE Game
 SETLOCAL EnableDelayedExpansion
 
 REM SET the root so that the ghost does not exit the game!
 SET "root=%cd%"
 
+start /d "%root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Tunnel\Fork\Right_Tunnel\Grate" Pond.bat
+start /d "%root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall" Passage.bat
+start /d "%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1" Study.bat
+start /d "%root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door" Mausoleum_Entrance.bat
+start /d "%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen" Secret.bat
+
 :SWITCHDIR
-timeout /t 2 /nobreak>NUL
+timeout /t 15 /nobreak>NUL
 
 REM find the ghost and its folder
 FOR /R .\ %%a in (*) do IF "%%~nxa"=="Ghost.txt" SET g=%%~dpnxa
 FOR %%a in ("%g%") do SET "p=%%~dpa"
 SET pa=%p:~0,-1%
-ECHO ghost is at %pa%
+ECHO ghost moved to %pa%
 REM PAUSE
 
 REM count the number of folders in the dir of the ghost
