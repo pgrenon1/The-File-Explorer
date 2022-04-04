@@ -1,4 +1,4 @@
-# The-File-Exploirer
+# The-File-Explorer
 Don't look at the passwords.txt.
 Go into the Game folder and run the Game.bat file. Close all batch files other than Game.bat.
 Then minimize the Game.bat process window.
