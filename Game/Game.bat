@@ -3,8 +3,6 @@ CLS
 TITLE Game
 SETLOCAL EnableDelayedExpansion
 
-SET %
-
 :SETUP
     REM SET the root so that the ghost does not exit the game!
     SET "root=%cd%"
@@ -14,6 +12,9 @@ SET %
     START Lock.bat L %cd%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1 Study sculpture
     START Lock.bat L %cd%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
     START Lock.bat L %cd%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
+
+    START CreateShortcut.bat %cd%\Forest\Path\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path\Back.lnk %cd%\Manor\Back
+    START CreateShortcut.bat %cd%\Manor\Back\Path_In_Forest.lnk %cd%\Forest\Path\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path
 
     REM START /min ambience.mp3
     CLS
