@@ -1,6 +1,7 @@
 cls
 @echo off
 title Folder Locker
+
 set command=%1
 set pathToFolder=%2
 set folder=%3
@@ -38,7 +39,7 @@ GOTO END
 
 :UNLOCK
     ECHO Unlocking %fullPath%
-    attrib -h %fullPath%
+    attrib -h -s %fullPath%
     ECHO Unlocked %fullPath%
     GOTO END
 
