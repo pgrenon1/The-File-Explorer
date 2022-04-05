@@ -6,18 +6,20 @@ SETLOCAL EnableDelayedExpansion
 :SETUP
     REM SET the root so that the ghost does not exit the game!
     SET "root=%cd%\Game"
-    SET Back_Path=%root%\Forest\Path\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path
+    SET Back_Path=%root%\Forest\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path
     SET Living_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room
     SET Dining_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room
     SET Ball_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Back\Left_Door\Ball_Room
     SET Reception_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room\Corridor\Reception_Room
     SET Kitchen=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen
+    SET Cemetary=%root%\Forest\Path\Path\Fork\Right_Path\Cemetary
+    SET Tunnel_Openning=%Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Left_Tunnel\Tunnel\Tunnel_Openning
 
-    START Lock.bat L %root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Tunnel\Fork\Right_Tunnel\Grate Pond cattail
-    START Lock.bat L %root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall Passage hibiscus
-    START Lock.bat L %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1 Study sculpture
-    START Lock.bat L %root%\Forest\Path\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
-    START Lock.bat L %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
+    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Right_Tunnel\Grate Pond cattail
+    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall Passage hibiscus
+    START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1 Study sculpture
+    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
+    START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
 
     START CreateShortcut.bat %Back_Path%\Back.lnk %root%\Manor\Back
     START CreateShortcut.bat %root%\Manor\Back\Path_In_Forest.lnk %Back_Path%
@@ -31,9 +33,16 @@ SETLOCAL EnableDelayedExpansion
     START CreateShortcut.bat %Ball_Room%\Door_To_Kitchen\Kitchen.lnk %Kitchen%
     START CreateShortcut.bat %Kitchen%\Door_To_Ball_Room\Ball_Room.lnk %Ball_Room%
 
+    START CreateShortcut.bat %Tunnel_Openning%\Kitchen.lnk %Kitchen%
+    START CreateShortcut.bat %Kitchen%\Secret\Trapdoor\Tunnel_Openning.lnk %Tunnel_Openning%
+
+    START CreateShortcut.bat %root%\Manor\Back\Back_Entrance\Hall.lnk %Ball_Room%\Hall
+    START CreateShortcut.bat %Ball_Room%\Hall\Back_Entrance.lnk %root%\Manor\Back\Back_Entrance
+
+    START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Right_Door\Ball_Room.lnk %Ball_Room%
 
     REM START /min ambience.mp3
-    CLS
+    
     ECHO Don't close this
     GOTO ENDLOCAL
 

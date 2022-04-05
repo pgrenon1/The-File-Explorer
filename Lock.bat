@@ -1,25 +1,20 @@
-cls
-@echo off
-title Folder Locker
-
-set command=%1
-set pathToFolder=%2
-set folder=%3
-set password=%4
-set fullPath=%pathToFolder%\%folder%
-ECHO %fullPath%
-
-IF /I "%command%"=="u" GOTO UNLOCK
-IF /I "%command%"=="l" GOTO LOCK
-GOTO END
+CLS
+@ECHO OFF
+TITLE Folder Locker
+SHIFT & GOTO :%~1
 
 :LOCK
+    SET pathToFolder=%1
+    SET folder=%2
+    SET fullPath=%pathToFolder%\%folder%
+    SET password=%3
+
     ECHO Locking %fullPath%
     attrib +h %fullPath%
-    ECHO locked %fullPath%
+    ECHO Locked %fullPath%
+    IF [%password%] == [] GOTO END
 
         REM Creating unlocker batch file if provided password
-        IF [%password%] == [] GOTO END
         @ECHO cls > %fullPath%.bat
         @ECHO @ECHO off >> %fullPath%.bat
         @ECHO title %folder% >> %fullPath%.bat
@@ -27,7 +22,7 @@ GOTO END
         @ECHO echo Enter password to unlock %%~n0. >> %fullPath%.bat
         @ECHO set/p "pass=>" >> %fullPath%.bat
         @ECHO if NOT %%pass%%==%password% goto FAIL >> %fullPath%.bat
-        @ECHO attrib -h -s %fullPath%
+        @ECHO attrib -h %fullPath% >> %fullPath%.bat
         @ECHO echo Unlocked successfully >> %fullPath%.bat
         @ECHO goto END >> %fullPath%.bat
         @ECHO :FAIL >> %fullPath%.bat
@@ -38,8 +33,12 @@ GOTO END
         GOTO END
 
 :UNLOCK
+    SET pathToFolder=%1
+    SET folder=%2
+    SET fullPath=%pathToFolder%\%folder%
+    SET password=%3
     ECHO Unlocking %fullPath%
-    attrib -h -s %fullPath%
+    ATTRIB -h %fullPath%
     ECHO Unlocked %fullPath%
     GOTO END
 
