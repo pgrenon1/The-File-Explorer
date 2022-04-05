@@ -54,7 +54,10 @@ SETLOCAL EnableDelayedExpansion
     START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Stairs_to_Hall_Mezzanine\Back\Center_Door\Ball_Room_Mezzanine 
 
     REM START /min ambience.mp3
-    
+
+    TREE %root% /a /f > tree.txt
+
+    CLS
     ECHO Don't close this
     GOTO ENDLOCAL
 
