@@ -21,6 +21,16 @@ SETLOCAL EnableDelayedExpansion
     START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
     START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
 
+    START CreateShortcut.bat %cd%\DEBUG_Back_Path.lnk %Back_Path%
+    START CreateShortcut.bat %cd%\DEBUG_Living_Room.lnk %Living_Room%
+    START CreateShortcut.bat %cd%\DEBUG_Dining_Room.lnk %Dining_Room%
+    START CreateShortcut.bat %cd%\DEBUG_Ball_Room.lnk %Ball_Room%
+    START CreateShortcut.bat %cd%\DEBUG_Reception_Room.lnk %Reception_Room%
+    START CreateShortcut.bat %cd%\DEBUG_Kitchen.lnk %Kitchen%
+    START CreateShortcut.bat %cd%\DEBUG_Cemetary.lnk %Cemetary%
+    START CreateShortcut.bat %cd%\DEBUG_Tunnel_Openning.lnk %Tunnel_Openning%
+
+
     START CreateShortcut.bat %Back_Path%\Back.lnk %root%\Manor\Back
     START CreateShortcut.bat %root%\Manor\Back\Path_In_Forest.lnk %Back_Path%
 
@@ -40,6 +50,8 @@ SETLOCAL EnableDelayedExpansion
     START CreateShortcut.bat %Ball_Room%\Hall\Back_Entrance.lnk %root%\Manor\Back\Back_Entrance
 
     START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Right_Door\Ball_Room.lnk %Ball_Room%
+
+    START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Stairs_to_Hall_Mezzanine\Back\Center_Door\Ball_Room_Mezzanine 
 
     REM START /min ambience.mp3
     
