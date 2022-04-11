@@ -5,7 +5,7 @@ title Passage
 echo Enter password to unlock %~n0. 
 set/p "pass=>" 
 if NOT %pass%==hibiscus goto FAIL 
-attrib -h C:\Users\pgren\Documents\Projects\The-File-Explorer\Game\Forest\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage 
+attrib -h D:\Projects\The-File-Explorer\Game\Forest\Path\Path\Fork\Right_Path\Cemetary\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage 
 echo Unlocked successfully 
 goto END 
 :FAIL 

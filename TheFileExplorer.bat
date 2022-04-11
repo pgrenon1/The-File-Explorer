@@ -1,19 +1,22 @@
 CLS
 @ECHO off
-TITLE Game
+TITLE TheFileExplorer
 SETLOCAL EnableDelayedExpansion
 
 :SETUP
-    REM SET the root so that the ghost does not exit the game!
+    ECHO Loading. . .
+
     SET "root=%cd%\Game"
-    SET Back_Path=%root%\Forest\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path
-    SET Living_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room
-    SET Dining_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room
-    SET Ball_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Back\Left_Door\Ball_Room
-    SET Reception_Room=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room\Corridor\Reception_Room
-    SET Kitchen=%root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen
-    SET Cemetary=%root%\Forest\Path\Path\Fork\Right_Path\Cemetary
-    SET Tunnel_Openning=%Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Left_Tunnel\Tunnel\Tunnel_Openning
+
+    SET Back_Path=          %root%\Forest\Path\Path\Fork\Left_Path\Path\Path\Trail\Fork\Left_Trail\Trail\Path\Path
+    SET Living_Room=        %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room
+    SET Dining_Room=        %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room
+    SET Ball_Room=          %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Left_Door\Ball_Room
+    SET Reception_Room=     %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_2\Living_Room\Corridor\Reception_Room
+    SET Kitchen=            %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen
+    SET Cemetary=           %root%\Forest\Path\Path\Fork\Right_Path\Cemetary
+    SET Tunnel_Openning=    %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Left_Tunnel\Tunnel\Tunnel_Openning
+    SET Piano_Inside=       %root%\Manor\Front\Main_Entrance\Door\Hall\Left\Corridor\Left_Door\Parlour\Piano\Piano_Inside
 
     START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Right_Tunnel\Grate Pond cattail
     START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall Passage hibiscus
@@ -21,15 +24,15 @@ SETLOCAL EnableDelayedExpansion
     START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
     START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
 
-    START CreateShortcut.bat %cd%\DEBUG_Back_Path.lnk %Back_Path%
-    START CreateShortcut.bat %cd%\DEBUG_Living_Room.lnk %Living_Room%
-    START CreateShortcut.bat %cd%\DEBUG_Dining_Room.lnk %Dining_Room%
-    START CreateShortcut.bat %cd%\DEBUG_Ball_Room.lnk %Ball_Room%
-    START CreateShortcut.bat %cd%\DEBUG_Reception_Room.lnk %Reception_Room%
-    START CreateShortcut.bat %cd%\DEBUG_Kitchen.lnk %Kitchen%
-    START CreateShortcut.bat %cd%\DEBUG_Cemetary.lnk %Cemetary%
-    START CreateShortcut.bat %cd%\DEBUG_Tunnel_Openning.lnk %Tunnel_Openning%
-
+    START CreateShortcut.bat %cd%\Debug\Back_Path.lnk %Back_Path%
+    START CreateShortcut.bat %cd%\Debug\Living_Room.lnk %Living_Room%
+    START CreateShortcut.bat %cd%\Debug\Dining_Room.lnk %Dining_Room%
+    START CreateShortcut.bat %cd%\Debug\Ball_Room.lnk %Ball_Room%
+    START CreateShortcut.bat %cd%\Debug\Reception_Room.lnk %Reception_Room%
+    START CreateShortcut.bat %cd%\Debug\Kitchen.lnk %Kitchen%
+    START CreateShortcut.bat %cd%\Debug\Cemetary.lnk %Cemetary%
+    START CreateShortcut.bat %cd%\Debug\Tunnel_Openning.lnk %Tunnel_Openning%
+    START CreateShortcut.bat %cd%\Debug\Piano_Inside.lnk %Piano_Inside%
 
     START CreateShortcut.bat %Back_Path%\Back.lnk %root%\Manor\Back
     START CreateShortcut.bat %root%\Manor\Back\Path_In_Forest.lnk %Back_Path%
@@ -51,15 +54,14 @@ SETLOCAL EnableDelayedExpansion
 
     START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Right_Door\Ball_Room.lnk %Ball_Room%
 
-    START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Stairs_to_Hall_Mezzanine\Back\Center_Door\Ball_Room_Mezzanine 
+    TREE %root% /a /f > Assets\tree.txt
 
-    REM START /min ambience.mp3
+    for /f "tokens=2" %%a in ('tasklist /fi "windowtitle eq TheFileExplorer" /v ^|find /i "TheFileExplorer"') do (set PID=%%a)
+    START /min AudioKiller.bat %PID%
 
-    TREE %root% /a /f > tree.txt
+    CALL :SOUND "D:\Projects\The-File-Explorer\Assets\ambience.mp3"
 
-    CLS
     ECHO Don't close this
-    GOTO ENDLOCAL
 
 :SWITCHDIR
     timeout /t 5 /nobreak>NUL
@@ -79,23 +81,18 @@ SETLOCAL EnableDelayedExpansion
 
     REM generate a choice between going up or going to one of the dir in the current directory of the ghost
     IF %pathToGhostFile% NEQ %root% (
-        GOTO CANBEZERO
+        GOTO MOVEUPORDOWN
     ) ELSE (
         REM ECHO ghost is at root
-        GOTO NONZERO 
+        GOTO MOVEDOWN 
     )
 
-:CANBEZERO
+:MOVEUPORDOWN
     SET /A rand=(%RANDOM%*(!count!+1)/32768)
-    IF %rand% EQU 0 GOTO MOVEUP
-    GOTO MOVEINFOLDER
+    IF %rand% EQU 0 ( GOTO MOVEUP ) ELSE ( GOTO MOVEDOWN )
+    ECHO MOVED UP OR DOWN
 
-:NONZERO
-    REM ECHO nonzero random
-    SET /A rand=(%RANDOM%*(!count!)/32768) + 1
-    GOTO MOVEINFOLDER
-
-:MOVEINFOLDER
+:MOVEDOWN
     REM ECHO random choice is %rand%
     REM PAUSE
     SET "folder=%pathToGhostFile%"
@@ -104,8 +101,8 @@ SETLOCAL EnableDelayedExpansion
         REM ECHO going over %%a
         REM ECHO counter is !counter!
         IF %rand% EQU !counter! (
-            MOVE "%ghostFile%" "%pathToGhostFile%\%%~nxa">NUL
-            ECHO Ghost moved DOWN to %pathToGhostFile%\%%~nxa
+            REM ECHO MOVING GHOST DOWN
+            CALL :MOVEGHOST %pathToGhostFile%\%%~nxa
             GOTO SWITCHDIR
         ) ELSE (
             SET /A counter=!counter!+1
@@ -114,17 +111,22 @@ SETLOCAL EnableDelayedExpansion
     GOTO SWITCHDIR
 
 :MOVEUP
-    REM PAUSE
+    REM ECHO MOVING GHOST UP
     SET pathUp="%ghostFile%\..\.."
-    MOVE "%ghostFile%" %pathUp%>NUL
-    CALL :NORMALIZEPATH %pathUp%
-    SET BLAH=%RETVAL%
-    ECHO Ghost moved UP   to %RETVAL%
-    REM PAUSE
+    CALL :MOVEGHOST %pathUp%
     GOTO SWITCHDIR
 
-:NORMALIZEPATH
-  SET RETVAL=%~f1
-  EXIT /B
+:MOVEGHOST
+    SET TARGET=%~f1
+    MOVE "%ghostFile%" %TARGET%>NUL
+    ECHO GHOST MOVED TO %TARGET%
+    FOR %%G IN (%TARGET%\*.mp3) DO ( CALL :SOUND %%G )
+    EXIT /B
 
-ENDLOCAL
+:SOUND
+    REM ECHO Starting sound %~f1
+    START /min sound.vbs %~f1
+    EXIT /B
+
+:END
+    ENDLOCAL

@@ -1,0 +1,345 @@
+Folder PATH listing
+Volume serial number is 00000006 EC49:081E
+D:\PROJECTS\THE-FILE-EXPLORER\GAME
++---Forest
+|   |   Forest.txt
+|   |   
+|   \---Path
+|       |   Path.txt
+|       |   
+|       \---Path
+|           |   Path.txt
+|           |   
+|           +---Fork
+|           |   |   Fork.txt
+|           |   |   
+|           |   +---Left_Path
+|           |   |   |   Left_Path.txt
+|           |   |   |   
+|           |   |   \---Path
+|           |   |       |   Path.txt
+|           |   |       |   
+|           |   |       \---Path
+|           |   |           |   Path.txt
+|           |   |           |   
+|           |   |           \---Trail
+|           |   |               |   Trail.txt
+|           |   |               |   
+|           |   |               \---Fork
+|           |   |                   |   Fork.txt
+|           |   |                   |   
+|           |   |                   +---Left_Trail
+|           |   |                   |   |   Left_Trail.txt
+|           |   |                   |   |   
+|           |   |                   |   \---Trail
+|           |   |                   |       |   Trail.txt
+|           |   |                   |       |   
+|           |   |                   |       \---Path
+|           |   |                   |           |   Path.txt
+|           |   |                   |           |   
+|           |   |                   |           \---Path
+|           |   |                   |                   Back.lnk
+|           |   |                   |                   Path.txt
+|           |   |                   |                   
+|           |   |                   \---Right_Trail
+|           |   |                       |   Right_Trail.txt
+|           |   |                       |   
+|           |   |                       \---Trail
+|           |   |                           |   Trail.txt
+|           |   |                           |   
+|           |   |                           \---Small_Clearing
+|           |   |                               |   Small_Clearing.txt
+|           |   |                               |   
+|           |   |                               \---Well
+|           |   |                                       Well.txt
+|           |   |                                       
+|           |   \---Right_Path
+|           |       |   Right_Path.txt
+|           |       |   
+|           |       \---Cemetary
+|           |           |   Cemetary.txt
+|           |           |   Grave 1.txt
+|           |           |   Grave 10.txt
+|           |           |   Grave 11.txt
+|           |           |   Grave 2.txt
+|           |           |   Grave 3.txt
+|           |           |   Grave 4.txt
+|           |           |   Grave 5.txt
+|           |           |   Grave 6.txt
+|           |           |   Grave 7.txt
+|           |           |   Grave 8.txt
+|           |           |   Grave 9.txt
+|           |           |   
+|           |           \---Mausoleum
+|           |               |   Mausoleum.txt
+|           |               |   
+|           |               \---Mausoleum_Door
+|           |                       Mausoleum Door.txt
+|           |                       Mausoleum_Entrance.bat
+|           |                       
+|           \---Path
+|               \---Fork
+|                   \---Left_Path
+|                       \---Path
+|                           \---Path
+|                               \---Trail
+|                                   \---Fork
+|                                       \---Left_Trail
+|                                           \---Trail
+|                                               \---Path
+|                                                   \---Path
+|                                                           Back.lnk
+|                                                           
++---Greenhouse
+|   |   Front_Door.txt
+|   |   Shed.txt
+|   |   
+|   +---Front_Door
+|   |   \---Main_Area
+|   |           Amaryllis.txt
+|   |           Anemone.txt
+|   |           Carnation.txt
+|   |           Chrysanthemum.txt
+|   |           Dahlia.txt
+|   |           Daisy.txt
+|   |           Geranium.txt
+|   |           Gladiolus.txt
+|   |           Hibiscus.txt
+|   |           Hose.txt
+|   |           Iris.txt
+|   |           Lavender.txt
+|   |           Lilac.txt
+|   |           Lily.txt
+|   |           Lisianthus.txt
+|   |           Narcissus.txt
+|   |           Poinsettia.txt
+|   |           Rose.txt
+|   |           Statice.txt
+|   |           Sunflower.txt
+|   |           Tea_Rose.txt
+|   |           Tulip.txt
+|   |           Violet.txt
+|   |           
+|   \---Shed
+|           Axe.txt
+|           Broom.txt
+|           Corny_Sign.txt
+|           Fertilizer.txt
+|           Gloves.txt
+|           Hammer.txt
+|           Ladder.txt
+|           Pots.txt
+|           Rakes.txt
+|           Screwdriver.txt
+|           Seeds.txt
+|           Shears.txt
+|           Shovels.txt
+|           Small_Shovel.txt
+|           Tarp.txt
+|           Watering_Can.txt
+|           
+\---Manor
+    |   Manor.txt
+    |   
+    +---Back
+    |   |   Path_In_Forest.lnk
+    |   |   Path_In_Forest.txt
+    |   |   
+    |   \---Back_Entrance
+    |           Hall.lnk
+    |           
+    \---Front
+        |   Front.txt
+        |   
+        +---Left_Garden
+        |       Left_Garden.txt
+        |       
+        +---Main_Entrance
+        |   |   Main_Entrance.txt
+        |   |   
+        |   +---Bell
+        |   |       Bell.txt
+        |   |       
+        |   \---Door
+        |       |   Door.txt
+        |       |   
+        |       \---Hall
+        |           |   Hall.txt
+        |           |   
+        |           +---Back
+        |           |   +---Left_Door
+        |           |   |   \---Ball_Room
+        |           |   |       +---Door_To_Kitchen
+        |           |   |       |       Kitchen.lnk
+        |           |   |       |       
+        |           |   |       +---Door_To_Reception_Room
+        |           |   |       |       Reception_Room.lnk
+        |           |   |       |       
+        |           |   |       +---Hall
+        |           |   |       |       Back_Entrance.lnk
+        |           |   |       |       
+        |           |   |       +---Stage
+        |           |   |       |       Grand_Piano.txt
+        |           |   |       |       
+        |           |   |       \---Stairs_To_Ball_Room_Mezzanine
+        |           |   |               Ball_Room_Mezzanine.lnk
+        |           |   |               
+        |           |   +---Right_Door
+        |           |   |       Ball_Room.lnk
+        |           |   |       
+        |           |   \---Stairs_to_Hall_Mezzanine
+        |           |       +---Back
+        |           |       |   \---Center_Door
+        |           |       |       \---Ball_Room_Mezzanine
+        |           |       |           |   Corridor_To_Right_1.lnk
+        |           |       |           |   Corridor_To_Right_2.lnk
+        |           |       |           |   
+        |           |       |           +---Back_Door
+        |           |       |           |   \---Hall
+        |           |       |           |           Back_Entrance.lnk
+        |           |       |           |           
+        |           |       |           \---Stairs_To_Ball_Room_Floor
+        |           |       |                   Ball_Room.lnk
+        |           |       |                   
+        |           |       \---Right
+        |           |           \---Corridor
+        |           |               +---Corridor_To_Left
+        |           |               |   +---Corridor_To_Left_1
+        |           |               |   |       Ball_Room_Mezzanine.lnk
+        |           |               |   |       
+        |           |               |   \---Corridor_To_Left_2
+        |           |               |           Ball_Room_Mezzanine.lnk
+        |           |               |           
+        |           |               \---Right_Door_2
+        |           |                   \---Boudoir
+        |           |                           A_Note.txt
+        |           |                           
+        |           +---Left
+        |           |   |   New Text Document.txt
+        |           |   |   
+        |           |   \---Corridor
+        |           |       +---Left_Door
+        |           |       |   \---Parlour
+        |           |       |       |   Chairs.txt
+        |           |       |       |   Parlour.txt
+        |           |       |       |   Small_Table.txt
+        |           |       |       |   
+        |           |       |       \---Piano
+        |           |       |           |   Do.txt
+        |           |       |           |   Fa.txt
+        |           |       |           |   La.txt
+        |           |       |           |   Mi.txt
+        |           |       |           |   Partition.txt
+        |           |       |           |   Piano.txt
+        |           |       |           |   Re.txt
+        |           |       |           |   Si.txt
+        |           |       |           |   Sol.txt
+        |           |       |           |   
+        |           |       |           \---Piano_Inside
+        |           |       |               |   Ghost.txt
+        |           |       |               |   
+        |           |       |               +---A_Key
+        |           |       |               |       a.mp3
+        |           |       |               |       A_String.txt
+        |           |       |               |       
+        |           |       |               +---B_Key
+        |           |       |               |       b.mp3
+        |           |       |               |       B_String.txt
+        |           |       |               |       
+        |           |       |               +---C_Key
+        |           |       |               |       c.mp3
+        |           |       |               |       C_String.txt
+        |           |       |               |       
+        |           |       |               +---D_Key
+        |           |       |               |       d.mp3
+        |           |       |               |       D_String.txt
+        |           |       |               |       
+        |           |       |               +---E_Key
+        |           |       |               |       e.mp3
+        |           |       |               |       Gold_Colored_Key.txt
+        |           |       |               |       
+        |           |       |               +---F_Key
+        |           |       |               |       f.mp3
+        |           |       |               |       F_String.txt
+        |           |       |               |       
+        |           |       |               \---G_Key
+        |           |       |                       g.mp3
+        |           |       |                       G_String.txt
+        |           |       |                       
+        |           |       \---Right_Door
+        |           |           \---Library
+        |           |               +---Bookcase_1
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               +---Bookcase_2
+        |           |               |   |   Books.txt
+        |           |               |   |   
+        |           |               |   \---A_Different_Book
+        |           |               |           A_Different_Book.txt
+        |           |               |           Iron_Key.txt
+        |           |               |           
+        |           |               +---Bookcase_3
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               +---Bookcase_4
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               +---Bookcase_5
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               +---Bookcase_6
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               +---Bookcase_7
+        |           |               |       Books.txt
+        |           |               |       
+        |           |               \---Bookcase_8
+        |           |                       Books.txt
+        |           |                       
+        |           \---Right
+        |               |   Right.txt
+        |               |   
+        |               \---Corridor
+        |                   +---Left_Door_1
+        |                   |   \---Dining_Room
+        |                   |       |   Chairs.txt
+        |                   |       |   Dresser.txt
+        |                   |       |   Fireplace.txt
+        |                   |       |   Grandfather_Clock.txt
+        |                   |       |   Table.txt
+        |                   |       |   
+        |                   |       +---Kitchen_Door
+        |                   |       |   \---Kitchen
+        |                   |       |       |   Secret.bat
+        |                   |       |       |   
+        |                   |       |       \---Door_To_Ball_Room
+        |                   |       |               Ball_Room.lnk
+        |                   |       |               
+        |                   |       \---Living_Room_Door
+        |                   |               Living_Room.lnk
+        |                   |               
+        |                   +---Left_Door_2
+        |                   |   \---Living_Room
+        |                   |       |   Fireplace.txt
+        |                   |       |   Sofas.txt
+        |                   |       |   Table.txt
+        |                   |       |   
+        |                   |       +---Corridor
+        |                   |       |   |   Reception_Room.lnk
+        |                   |       |   |   
+        |                   |       |   \---Reception_Room
+        |                   |       |       \---Door_To_Ball_Room
+        |                   |       |               Ball_Room.lnk
+        |                   |       |               
+        |                   |       \---Dining_Room_Door
+        |                   |               Dining_Room.lnk
+        |                   |               
+        |                   \---Right_Door_1
+        |                           Study.bat
+        |                           
+        +---Right_Garden
+        |       Right_Garden.txt
+        |       
+        \---Windows
+                Windows.txt
+                

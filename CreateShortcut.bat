@@ -1,10 +1,12 @@
 @ECHO off
-setlocal EnableDelayedExpansion
-set pathToLnk=%1
-set pathToTarget=%2
+SETLOCAL EnableDelayedExpansion
+SET pathToLnk=%1
+SET pathToTarget=%2
 
 CALL Util.bat GETFILEPARENT %pathToLnk% from
 CALL Util.bat GETLASTPATHELEMENT %pathToTarget% to
+
+ECHO Creating shortcut from %from% to %to%
 
 SET vbscript="CreateShortcut_%from%_TO_%to%.vbs"
 ECHO %vbscript%
@@ -17,7 +19,5 @@ ECHO oLink.TargetPath = "%pathToTarget%" >> %vbscript%
 ECHO oLink.Save >> %vbscript%
 CSCRIPT %vbscript%
 DEL %vbscript%
-
-ECHO Shortcut created from %from% to %to%
 
 EXIT
