@@ -1,6 +1,6 @@
-Folder PATH listing
-Volume serial number is 00000006 EC49:081E
-D:\PROJECTS\THE-FILE-EXPLORER\GAME
+Folder PATH listing for volume Local Disk
+Volume serial number is 0000003D AAFC:6767
+C:\USERS\PGREN\DOCUMENTS\PROJECTS\THE-FILE-EXPLORER\GAME
 +---Forest
 |   |   Forest.txt
 |   |   
@@ -236,8 +236,6 @@ D:\PROJECTS\THE-FILE-EXPLORER\GAME
         |           |       |           |   Sol.txt
         |           |       |           |   
         |           |       |           \---Piano_Inside
-        |           |       |               |   Ghost.txt
-        |           |       |               |   
         |           |       |               +---A_Key
         |           |       |               |       a.mp3
         |           |       |               |       A_String.txt
@@ -256,6 +254,7 @@ D:\PROJECTS\THE-FILE-EXPLORER\GAME
         |           |       |               |       
         |           |       |               +---E_Key
         |           |       |               |       e.mp3
+        |           |       |               |       Ghost.txt
         |           |       |               |       Gold_Colored_Key.txt
         |           |       |               |       
         |           |       |               +---F_Key

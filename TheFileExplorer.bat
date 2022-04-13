@@ -59,7 +59,7 @@ SETLOCAL EnableDelayedExpansion
     for /f "tokens=2" %%a in ('tasklist /fi "windowtitle eq TheFileExplorer" /v ^|find /i "TheFileExplorer"') do (set PID=%%a)
     START /min AudioKiller.bat %PID%
 
-    CALL :SOUND "D:\Projects\The-File-Explorer\Assets\ambience.mp3"
+    CALL :SOUND "%cd%\Assets\ambience.mp3"
 
     ECHO Don't close this
 
