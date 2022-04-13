@@ -18,48 +18,47 @@ SETLOCAL EnableDelayedExpansion
     SET Tunnel_Openning=    %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Left_Tunnel\Tunnel\Tunnel_Openning
     SET Piano_Inside=       %root%\Manor\Front\Main_Entrance\Door\Hall\Left\Corridor\Left_Door\Parlour\Piano\Piano_Inside
 
-    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Right_Tunnel\Grate Pond cattail
-    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall Passage hibiscus
-    START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1 Study sculpture
-    START Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
-    START Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
+    START Assets\Scripts\Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall\Passage\Tunnel\Fork\Right_Tunnel\Grate Pond cattail
+    START Assets\Scripts\Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door\Mausoleum_Entrance\Stairs\Mausoleum_Hall\Back_Wall Passage hibiscus
+    START Assets\Scripts\Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Right_Door_1 Study sculpture
+    START Assets\Scripts\Lock.bat LOCK %Cemetary%\Mausoleum\Mausoleum_Door Mausoleum_Entrance brown
+    START Assets\Scripts\Lock.bat LOCK %root%\Manor\Front\Main_Entrance\Door\Hall\Right\Corridor\Left_Door_1\Dining_Room\Kitchen_Door\Kitchen Secret magnifier
 
-    START CreateShortcut.bat %cd%\Debug\Back_Path.lnk %Back_Path%
-    START CreateShortcut.bat %cd%\Debug\Living_Room.lnk %Living_Room%
-    START CreateShortcut.bat %cd%\Debug\Dining_Room.lnk %Dining_Room%
-    START CreateShortcut.bat %cd%\Debug\Ball_Room.lnk %Ball_Room%
-    START CreateShortcut.bat %cd%\Debug\Reception_Room.lnk %Reception_Room%
-    START CreateShortcut.bat %cd%\Debug\Kitchen.lnk %Kitchen%
-    START CreateShortcut.bat %cd%\Debug\Cemetary.lnk %Cemetary%
-    START CreateShortcut.bat %cd%\Debug\Tunnel_Openning.lnk %Tunnel_Openning%
-    START CreateShortcut.bat %cd%\Debug\Piano_Inside.lnk %Piano_Inside%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Back_Path.lnk %Back_Path%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Living_Room.lnk %Living_Room%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Dining_Room.lnk %Dining_Room%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Ball_Room.lnk %Ball_Room%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Reception_Room.lnk %Reception_Room%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Kitchen.lnk %Kitchen%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Cemetary.lnk %Cemetary%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Tunnel_Openning.lnk %Tunnel_Openning%
+    START Assets\Scripts\CreateShortcut.bat %cd%\Debug\Piano_Inside.lnk %Piano_Inside%
 
-    START CreateShortcut.bat %Back_Path%\Back.lnk %root%\Manor\Back
-    START CreateShortcut.bat %root%\Manor\Back\Path_In_Forest.lnk %Back_Path%
+    START Assets\Scripts\CreateShortcut.bat %Back_Path%\Back.lnk %root%\Manor\Back
+    START Assets\Scripts\CreateShortcut.bat %root%\Manor\Back\Path_In_Forest.lnk %Back_Path%
 
-    START CreateShortcut.bat %Living_Room%\Dining_Room_Door\Dining_Room.lnk %Dining_Room%
-    START CreateShortcut.bat %Dining_Room%\Living_Room_Door\Living_Room.lnk %Living_Room%
+    START Assets\Scripts\CreateShortcut.bat %Living_Room%\Dining_Room_Door\Dining_Room.lnk %Dining_Room%
+    START Assets\Scripts\CreateShortcut.bat %Dining_Room%\Living_Room_Door\Living_Room.lnk %Living_Room%
 
-    START CreateShortcut.bat %Ball_Room%\Door_To_Reception_Room\Reception_Room.lnk %Reception_Room%
-    START CreateShortcut.bat %Reception_Room%\Door_To_Ball_Room\Ball_Room.lnk %Ball_Room%
+    START Assets\Scripts\CreateShortcut.bat %Ball_Room%\Door_To_Reception_Room\Reception_Room.lnk %Reception_Room%
+    START Assets\Scripts\CreateShortcut.bat %Reception_Room%\Door_To_Ball_Room\Ball_Room.lnk %Ball_Room%
 
-    START CreateShortcut.bat %Ball_Room%\Door_To_Kitchen\Kitchen.lnk %Kitchen%
-    START CreateShortcut.bat %Kitchen%\Door_To_Ball_Room\Ball_Room.lnk %Ball_Room%
+    START Assets\Scripts\CreateShortcut.bat %Ball_Room%\Door_To_Kitchen\Kitchen.lnk %Kitchen%
+    START Assets\Scripts\CreateShortcut.bat %Kitchen%\Door_To_Ball_Room\Ball_Room.lnk %Ball_Room%
 
-    START CreateShortcut.bat %Tunnel_Openning%\Kitchen.lnk %Kitchen%
-    START CreateShortcut.bat %Kitchen%\Secret\Trapdoor\Tunnel_Openning.lnk %Tunnel_Openning%
+    START Assets\Scripts\CreateShortcut.bat %Tunnel_Openning%\Kitchen.lnk %Kitchen%
+    START Assets\Scripts\CreateShortcut.bat %Kitchen%\Secret\Trapdoor\Tunnel_Openning.lnk %Tunnel_Openning%
 
-    START CreateShortcut.bat %root%\Manor\Back\Back_Entrance\Hall.lnk %Ball_Room%\Hall
-    START CreateShortcut.bat %Ball_Room%\Hall\Back_Entrance.lnk %root%\Manor\Back\Back_Entrance
+    START Assets\Scripts\CreateShortcut.bat %root%\Manor\Back\Back_Entrance\Hall.lnk %Ball_Room%\Hall
+    START Assets\Scripts\CreateShortcut.bat %Ball_Room%\Hall\Back_Entrance.lnk %root%\Manor\Back\Back_Entrance
 
-    START CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Right_Door\Ball_Room.lnk %Ball_Room%
+    START Assets\Scripts\CreateShortcut.bat %root%\Manor\Front\Main_Entrance\Door\Hall\Back\Right_Door\Ball_Room.lnk %Ball_Room%
 
     TREE %root% /a /f > Assets\tree.txt
 
-    for /f "tokens=2" %%a in ('tasklist /fi "windowtitle eq TheFileExplorer" /v ^|find /i "TheFileExplorer"') do (set PID=%%a)
-    START /min AudioKiller.bat %PID%
-
-    CALL :SOUND "%cd%\Assets\ambience.mp3"
+    for /f "tokens=2" %%a in ('tasklist /fi "ImageName eq cmd.exe" /v ^|find /i "TheFileExplorer"') do (set PID=%%a)
+    ECHO %PID%
+    CALL :SOUND Assets\Audio\ambience.mp3
 
     ECHO Don't close this
 
@@ -125,7 +124,7 @@ SETLOCAL EnableDelayedExpansion
 
 :SOUND
     REM ECHO Starting sound %~f1
-    START /min sound.vbs %~f1
+    START Assets/Scripts/sound.vbs %~f1 %PID%
     EXIT /B
 
 :END

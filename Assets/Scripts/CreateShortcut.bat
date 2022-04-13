@@ -3,8 +3,8 @@ SETLOCAL EnableDelayedExpansion
 SET pathToLnk=%1
 SET pathToTarget=%2
 
-CALL Util.bat GETFILEPARENT %pathToLnk% from
-CALL Util.bat GETLASTPATHELEMENT %pathToTarget% to
+CALL Assets/Scripts/Util.bat GETFILEPARENT %pathToLnk% from
+CALL Assets/Scripts/Util.bat GETLASTPATHELEMENT %pathToTarget% to
 
 ECHO Creating shortcut from %from% to %to%
 

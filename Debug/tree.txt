@@ -1,5 +1,5 @@
 Folder PATH listing
-Volume serial number is 000000AC EC49:081E
+Volume serial number is 0000003C EC49:081E
 D:\PROJECTS\THE-FILE-EXPLORER\GAME
 +---Forest
 |   |   Forest.txt
@@ -239,7 +239,6 @@ D:\PROJECTS\THE-FILE-EXPLORER\GAME
         |           |       |               +---A_Key
         |           |       |               |       a.mp3
         |           |       |               |       A_String.txt
-        |           |       |               |       Ghost.txt
         |           |       |               |       
         |           |       |               +---B_Key
         |           |       |               |       b.mp3
@@ -252,6 +251,7 @@ D:\PROJECTS\THE-FILE-EXPLORER\GAME
         |           |       |               +---D_Key
         |           |       |               |       d.mp3
         |           |       |               |       D_String.txt
+        |           |       |               |       Ghost.txt
         |           |       |               |       
         |           |       |               +---E_Key
         |           |       |               |       e.mp3
